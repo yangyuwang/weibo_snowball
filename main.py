@@ -5,6 +5,8 @@ import json
 max_rounds = 2
 since_date = "2015-01-01"
 seed_user_list = ["5660911274"]
+mongo_db_link = "mongodb+srv://wangyd:Yangyu20010105@cluster0.vhukb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+cookie = "SCF=Ar11oB-yEgjxtlMBhJMTYH1t2nl2EA-YxmTVMALrygV8F36YgK1ZMgyHDzqXyTiPCkxgRIrICaz8BEmynvFP3VA.; ALF=1736881030; _T_WM=83921483250; XSRF-TOKEN=c123d2; WEIBOCN_FROM=1110006030; SUB=_2A25KW1bWDeRhGeNK7VsZ-S7Iwj2IHXVpGdYerDV6PUJbktAYLVetkW1NSTq1lyIMmY_s3FWqKUKqAT40WHleWUuV; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9W5ZaDes33M59QOyQZ1_SEKF5JpX5KMhUgL.Fo-XSo.R1K5X1K22dJLoIpBLxKqLBoBL12zLxKnL122L12i7d7tt; SSOLoginState=1734289030; MLOGIN=1; M_WEIBOCN_PARAMS=uicode%3D20000061%26fid%3D5111959639560755%26oid%3D5111959639560755"
 
 '''第一轮要爬的ids'''
 users_ids_round1 = seed_user_list #第一轮要爬的ids
@@ -39,8 +41,8 @@ def modify_config(config_path, current_round):
     config["comment_max_download_count"] = 1000  # 最大评论下载数
     config["download_repost"] = 0  # 是否下载转发
     config["repost_max_download_count"] = 1000  # 最大转发下载数
-    config["cookie"] = "SCF=Ar11oB-yEgjxtlMBhJMTYH1t2nl2EA-YxmTVMALrygV8F36YgK1ZMgyHDzqXyTiPCkxgRIrICaz8BEmynvFP3VA.; ALF=1736881030; _T_WM=83921483250; XSRF-TOKEN=c123d2; WEIBOCN_FROM=1110006030; SUB=_2A25KW1bWDeRhGeNK7VsZ-S7Iwj2IHXVpGdYerDV6PUJbktAYLVetkW1NSTq1lyIMmY_s3FWqKUKqAT40WHleWUuV; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9W5ZaDes33M59QOyQZ1_SEKF5JpX5KMhUgL.Fo-XSo.R1K5X1K22dJLoIpBLxKqLBoBL12zLxKnL122L12i7d7tt; SSOLoginState=1734289030; MLOGIN=1; M_WEIBOCN_PARAMS=uicode%3D20000061%26fid%3D5111959639560755%26oid%3D5111959639560755"
-    config["mongodb_URI"] = "mongodb+srv://wangyd:Yangyu20010105@cluster0.vhukb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    config["cookie"] = cookie
+    config["mongodb_URI"] = mongo_db_link #mongodb link
 
     # 保存修改后的配置文件
     with open(config_path, 'w') as config_file:
