@@ -1,0 +1,2 @@
+2024-11-30 19:35:28,697 - WARNING - weibo.py[:186] - 不存在/Users/xuxuewei/Desktop/LGBT_network_copy/step2_crawler/users_ids_2.txt文件
+2024-12-15 13:22:42,124 - WARNING - weibo.py[:1469] - 系统中可能没有安装或启动MongoDB数据库，请先根据系统环境安装或启动MongoDB，再运行程序

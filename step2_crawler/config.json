@@ -1,0 +1,20 @@
+{
+    "user_id_list": "users_ids_1.txt",
+    "only_crawl_original": 0,
+    "remove_html_tag": 1,
+    "since_date": 5,
+    "write_mode": [
+        "mongo"
+    ],
+    "original_pic_download": 1,
+    "retweet_pic_download": 0,
+    "original_video_download": 0,
+    "retweet_video_download": 0,
+    "download_comment": 0,
+    "comment_max_download_count": 1000,
+    "download_repost": 0,
+    "repost_max_download_count": 1000,
+    "user_id_as_folder_name": 1,
+    "cookie": "SCF=Ar11oB-yEgjxtlMBhJMTYH1t2nl2EA-YxmTVMALrygV8F36YgK1ZMgyHDzqXyTiPCkxgRIrICaz8BEmynvFP3VA.; ALF=1736881030; _T_WM=83921483250; XSRF-TOKEN=c123d2; WEIBOCN_FROM=1110006030; SUB=_2A25KW1bWDeRhGeNK7VsZ-S7Iwj2IHXVpGdYerDV6PUJbktAYLVetkW1NSTq1lyIMmY_s3FWqKUKqAT40WHleWUuV; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9W5ZaDes33M59QOyQZ1_SEKF5JpX5KMhUgL.Fo-XSo.R1K5X1K22dJLoIpBLxKqLBoBL12zLxKnL122L12i7d7tt; SSOLoginState=1734289030; MLOGIN=1; M_WEIBOCN_PARAMS=uicode%3D20000061%26fid%3D5111959639560755%26oid%3D5111959639560755",
+    "mongodb_URI": "mongodb+srv://wangyd:Yangyu20010105@cluster0.vhukb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+}
