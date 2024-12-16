@@ -1,8 +1,5 @@
 import subprocess
-import os
 import json
-
-os.chdir("/Users/pootaatoos/Desktop/LGBT_network_copy")
 
 '''轮次'''
 max_rounds = 2

@@ -313,6 +313,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "lxml" },
+    { name = "path" },
     { name = "pymongo" },
     { name = "pymysql" },
     { name = "python-dateutil" },
@@ -327,6 +328,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "lxml", specifier = "==5.3.0" },
+    { name = "path", specifier = ">=17.0.0" },
     { name = "pymongo", specifier = "==4.6.3" },
     { name = "pymysql", specifier = "==1.1.1" },
     { name = "python-dateutil", specifier = ">=2.9.0.post0" },
@@ -443,6 +445,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/87/bd/b982085f091367ca25ccb61f2d127655a0daac1716ecfde014ab7c538116/parsel-1.9.1.tar.gz", hash = "sha256:14e00dc07731c9030db620c195fcae884b5b4848e9f9c523c6119f708ccfa9ac", size = 51225 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/85/7e/e3f1a7ff69303a4e08a8742a285406e5786650d8218ff194743eff292a1e/parsel-1.9.1-py2.py3-none-any.whl", hash = "sha256:c4a777ee6c3ff5e39652b58e351c5cf02c12ff420d05b07a7966aebb68ab1700", size = 17116 },
+]
+
+[[package]]
+name = "path"
+version = "17.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ff/a3/5dac44ce60ad6543578736a5729c5c2130cdac1c3117c61aad0583c2e3c6/path-17.0.0.tar.gz", hash = "sha256:e1540261d22df1416fb1b498b3b1ed5353a371a48fe197d66611bb01e7fab2d5", size = 49721 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/55/49/5ffc63f96029e4f899d6caee9db40c445ded1bf15cb60b32d77363c2c8de/path-17.0.0-py3-none-any.whl", hash = "sha256:b7309739c569e30110a34c6c812e582c09ff504c43e1232817410181838918ed", size = 24831 },
 ]
 
 [[package]]

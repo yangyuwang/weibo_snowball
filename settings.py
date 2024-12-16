@@ -7,7 +7,7 @@ NEWSPIDER_MODULE = 'spiders'
 
 ROBOTSTXT_OBEY = False
 
-with open('/Users/pootaatoos/Desktop/LGBT_network_copy/cookie.txt', 'rt', encoding='utf-8') as f:
+with open('cookie.txt', 'rt', encoding='utf-8') as f:
     cookie = f.read().strip()
 
 DEFAULT_REQUEST_HEADERS = {
