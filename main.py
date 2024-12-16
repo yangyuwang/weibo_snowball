@@ -2,7 +2,7 @@ import subprocess
 import json
 
 '''轮次'''
-max_rounds = 2
+max_rounds = 10
 since_date = "2015-01-01"
 seed_user_list = ["5660911274"]
 mongo_db_link = "mongodb+srv://wangyd:Yangyu20010105@cluster0.vhukb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
@@ -32,7 +32,7 @@ def modify_config(config_path, current_round):
     config["write_mode"] = ["mongo"]
     config["only_crawl_original"] = 0  # 是否只抓取原创微博
     config["remove_html_tag"] = 1  # 是否移除HTML标签
-    config["since_date"] = 5  # 爬取的起始日期/距今日期
+    config["since_date"] = since_date  # 爬取的起始日期/距今日期
     config["original_pic_download"] = 1  # 是否下载原创微博中的图片
     config["retweet_pic_download"] = 0  # 是否下载转发微博中的图片
     config["original_video_download"] = 0  # 是否下载原创微博中的视频
