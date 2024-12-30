@@ -18,7 +18,7 @@ import sys
 current_round = int(sys.argv[1])
 
 '''路径'''
-os.chdir("/Users/pootaatoos/Desktop/LGBT_network_copy")
+os.chdir("/Users/pootaatoos/weibo_snowball")
 
 '''环境配置'''
 os.environ['SCRAPY_SETTINGS_MODULE'] = 'settings'
@@ -90,8 +90,9 @@ tweetlist = []
 for file_name in os.listdir(path):
     try:
         if 'keyword' in file_name and user_list[0] in file_name and user_list[-1] in file_name:
-            with open(os.path.join(path, file_name), "r") as f:
+            with open(os.path.join(path, file_name), "r", encoding = "UTF-8") as f:
                 for line in f:
+                    print(line)
                     tweetlist.append(json.loads(line))
     except FileNotFoundError as e:
         print(f"File not found. Error details: {e}")
