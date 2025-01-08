@@ -2,7 +2,7 @@
     "user_id_list": "users_ids_1.txt",
     "only_crawl_original": 0,
     "remove_html_tag": 1,
-    "since_date": "2015-01-01",
+    "since_date": 10,
     "write_mode": [
         "mongo"
     ],

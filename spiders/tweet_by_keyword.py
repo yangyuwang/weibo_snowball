@@ -28,8 +28,8 @@ class TweetSpiderByKeyword(Spider):
 
         # 这里的时间可替换成实际需要的时间段
         not_time = True
-        start_time = datetime.datetime(year=2015, month=11, day=1)
-        end_time = datetime.datetime(year=2024, month=11, day=1)
+        start_time = datetime.datetime(year=2015, month=1, day=1)
+        end_time = datetime.datetime(year=2024, month=12, day=31)
         # 是否按照小时进行切分，数据量更大; 对于非热门关键词**不需要**按照小时切分
         is_split_by_hour = False
         for keyword in keywords:

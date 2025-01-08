@@ -57,6 +57,9 @@ if __name__ == "__main__":
         print(f"开始第 {current_round} 轮爬取")
         #修改配置文件为本轮爬取的需求
         modify_config(config_path, current_round)
+        #cookie overwrite for minor_scrape
+        with open("cookie.txt", "w") as f:
+            f.write(cookie)
         #调用crawler，爬当前轮次用户微博
         subprocess.run(['python', 'step2_crawler/weibo.py'])
         #调用minor_scrape.py，传递当前轮次参数，爬mention，生成新一轮用户
