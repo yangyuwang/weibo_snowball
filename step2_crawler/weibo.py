@@ -446,12 +446,16 @@ class Weibo(object):
 
     def get_pics(self, weibo_info):
         """获取微博原始图片url"""
-        if weibo_info.get("pics"):
-            pic_info = weibo_info["pics"]
-            pic_list = [pic["large"]["url"] for pic in pic_info]
-            pics = ",".join(pic_list)
+        if "对象" in weibo_info["text"] or "男朋友" in weibo_info["text"] or "老公" in weibo_info["text"]:
+            if weibo_info.get("pics"):
+                pic_info = weibo_info["pics"]
+                pic_list = [pic["large"]["url"] for pic in pic_info]
+                pics = ",".join(pic_list)
+            else:
+                pics = ""
         else:
             pics = ""
+
         return pics
 
     def get_live_photo(self, weibo_info):

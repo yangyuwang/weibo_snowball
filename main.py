@@ -58,7 +58,7 @@ if __name__ == "__main__":
         #修改配置文件为本轮爬取的需求
         modify_config(config_path, current_round)
         #调用crawler，爬当前轮次用户微博
-        #subprocess.run(['python', 'step2_crawler/weibo.py'])
+        subprocess.run(['python', 'step2_crawler/weibo.py'])
         #调用minor_scrape.py，传递当前轮次参数，爬mention，生成新一轮用户
         subprocess.run(['python', 'minor_scrape.py', str(current_round)])
 
