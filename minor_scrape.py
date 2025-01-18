@@ -90,6 +90,7 @@ user_data = pd.read_csv("step2_crawler/weibo/users.csv")
 try:
     with open(input_path, "r") as f:
         user_list = []
+        screen_names = []
         user_list_original = [re.sub("\n", "", i) for i in f.readlines()]
         information_user = [user_data[user_data["用户id"] == id] for id in user_list_original]
         information_list = [(info["用户id"].values[0], info["昵称"].values[0], info["简介"].values[0], info["认证类型"].values[0]) for info in information_user]
@@ -97,23 +98,13 @@ try:
         for id, *information in information_list:
             if not user_check(*information, gpt = False):
                 user_list.append(id)
+                screen_names.append(information[0])
 
 except FileNotFoundError:
     print(f"文件 {input_path} 未找到，退出。")
     sys.exit(1)
 
 print(f"User list for round {current_round}: {user_list}")
-
-
-'''获取用户的微博资料'''
-screen_names = []
-for user_id in user_list:
-    try:
-        weibo_profile = get_weibo_profile(uid=user_id)
-        screen_names.append("%40" + weibo_profile.screen_name)
-    except Exception as e:
-        print(f"获取用户 {user_id} 的资料时出错：{e}")
-        continue
 
 '''保存screen_names'''
 output_path = f"step2_crawler/screen_names_{current_round}.txt"
