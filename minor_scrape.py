@@ -1,5 +1,4 @@
 import os
-from weibo_escraper import get_weibo_profile
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 import json
