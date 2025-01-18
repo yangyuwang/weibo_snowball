@@ -16,6 +16,6 @@ To prevent the official accounts (such as government, groups...) influence the s
 
 1. if screen name contains province name, and the verification information is not personal, then the account would be considered as official account.
 
-2. (when setting to use gpt,) a large language model would be used based on the screen name and descriptions to determine whether it is a official account or not. (The information of the model see [here (qwen2.5-3b-instruct)](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct))
+2. (when setting to use gpt,) a large language model would be used based on the screen name and descriptions to determine whether it is a official account or not. (The information of the model see here: [qwen2.5-3b-instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct))
 
 ## face detection by opencv (tbd)
