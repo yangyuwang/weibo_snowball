@@ -31,7 +31,7 @@ client = OpenAI(
 )
 
     
-def user_check(screen_name, description, verify_information, gpt = None):
+def user_check(screen_name, description, verify_information, gender, gpt = None):
     """
     Checks if a Weibo account is an official account based on 
     its screen name, description, and verification information.
@@ -66,7 +66,7 @@ def user_check(screen_name, description, verify_information, gpt = None):
     else:
         result = False
 
-    return result or (province and verified)
+    return result or (province and verified) or gender == "f"
 
 
 '''设置 round 值'''
@@ -92,7 +92,7 @@ try:
         screen_names = []
         user_list_original = [re.sub("\n", "", i) for i in f.readlines()]
         information_user = [user_data[user_data["用户id"] == id] for id in user_list_original]
-        information_list = [(info["用户id"].values[0], info["昵称"].values[0], info["简介"].values[0], info["认证类型"].values[0]) for info in information_user]
+        information_list = [(info["用户id"].values[0], info["昵称"].values[0], info["简介"].values[0], info["认证类型"].values[0], info["性别"].values[0]) for info in information_user]
 
         for id, *information in information_list:
             if not user_check(*information, gpt = False):
