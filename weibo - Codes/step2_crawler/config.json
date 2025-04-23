@@ -1,0 +1,30 @@
+{
+    "user_id_list": [
+        5412428837,
+        3391656580,
+        1416793974,
+        1408351174,
+        3175798750,
+        3605031810,
+        2471362443,
+        3229021015
+    ],
+    "only_crawl_original": 0,
+    "remove_html_tag": 1,
+    "since_date": "2009-01-01",
+    "write_mode": [
+        "csv"
+    ],
+    "original_pic_download": 1,
+    "retweet_pic_download": 0,
+    "original_video_download": 0,
+    "retweet_video_download": 0,
+    "download_comment": 0,
+    "comment_max_download_count": 1000,
+    "download_repost": 0,
+    "repost_max_download_count": 1000,
+    "user_id_as_folder_name": 1,
+    "cookie": "_T_WM=718f99622b94d66f4649e5cb0a3d43ae; MLOGIN=1; M_WEIBOCN_PARAMS=oid%3D5154731124331829%26luicode%3D10000011%26lfid%3D1076032389651505; SCF=AsV2nMyc49QaHAW-FEEaN8vQW1putmQFzzvvJvsqbVjlGtehxikuhQWmia_aok0_fzeFvcyJFZv5NGz48haZ5sQ.; SUB=_2A25FBcRXDeRhGedH6VsZ9yjKwzuIHXVme1mfrDV6PUJbktANLRTHkW1NUNJPOoTaXk1JLTftuxqJrE_yDzEmlrP7; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WWHYRT.TV11w4jiSdK_jqgg5NHD95Qp1Kz41hMcSonNWs4DqcjZxGUyMJ9k-NxyMntt; SSOLoginState=1744942088; ALF=1747534088",
+    "mongodb_URI": "mongodb://localhost:27017/",
+    "start_page": 1
+}

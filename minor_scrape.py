@@ -85,11 +85,11 @@ process = CrawlerProcess(settings)
 '''加载用户ID'''
 input_path = "step2_crawler/users_ids.txt" #上一轮最后覆盖保存
 user_data = pd.read_csv("step2_crawler/weibo/users.csv")
-
 try:
     with open(input_path, "r") as f:
         user_list = []
         screen_names = []
+        screen_names_compare = []
         user_list_original = [re.sub("\n", "", i) for i in f.readlines()]
         information_user = [user_data[user_data["用户id"] == id] for id in user_list_original]
         information_list = [(info["用户id"].values[0], info["昵称"].values[0], info["简介"].values[0], info["认证类型"].values[0], info["性别"].values[0]) for info in information_user]
@@ -97,7 +97,8 @@ try:
         for id, *information in information_list:
             if not user_check(*information, gpt = False):
                 user_list.append(id)
-                screen_names.append(information[0])
+                screen_names_compare.append(information[0])
+                screen_names.append("%40" + information[0])
 
 except FileNotFoundError:
     print(f"文件 {input_path} 未找到，退出。")
@@ -149,7 +150,9 @@ for file_name in os.listdir(path):
             with open(os.path.join(path, file_name), "r", encoding = "UTF-8") as f:
                 for line in f:
                     print(line)
-                    tweetlist.append(json.loads(line))
+                    tweet = json.loads(line)
+                    if any(user in tweet["weibo"]["text"] for user in screen_names_compare):
+                        tweetlist.append(tweet)
     except FileNotFoundError as e:
         print(f"File not found. Error details: {e}")
         break
